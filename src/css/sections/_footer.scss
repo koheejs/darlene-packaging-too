@@ -1,0 +1,94 @@
+footer {
+  padding: 6rem 0;
+  color: white;
+  background-color: var(--secondary-color);
+
+  a {
+    color: white;
+  }
+
+  .logo {
+    display: block;
+    width: 70%;
+    max-width: 347px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4rem 0 8rem;
+    gap: 8rem;
+  }
+
+  .footer-navs {
+    flex-shrink: 0;
+    display: flex;
+    gap: 8rem;
+
+    .nav-item {
+      font-weight: 500;
+      line-height: 2;
+    }
+  }
+
+  .signup-form {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+
+    input {
+      height: 6rem;
+      line-height: 6rem;
+      width: 100%;
+      margin-right: -20px;
+      padding: 0 4rem;
+      border: none;
+      background-color: #44579c;
+      color: var(--white-color);
+      font-size: 2rem;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: var(--white-color);
+      }
+      border-radius: 10px;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 6rem;
+      line-height: 6rem;
+      border: none;
+      color: var(--secondary-color);
+      background-color: #d9d9d9;
+      padding: 0 3.2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 10px;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  @include breakpoint($breakpoint-md) {
+    .footer-content {
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .signup-form {
+      position: relative;
+      width: 100%;
+      // max-width: 500px;
+    }
+  }
+}

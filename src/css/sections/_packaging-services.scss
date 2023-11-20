@@ -1,0 +1,62 @@
+section.three-columns {
+  padding: 5.4rem 0;
+
+  .services-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+
+    @include breakpoint($breakpoint-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .service-item {
+    width: 30%;
+    max-width: 360px;
+
+    @include breakpoint($breakpoint-sm) {
+      width: 100%;
+    }
+
+    .thumb {
+      height: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2.8rem;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .icon {
+      @include square(105px);
+      margin-bottom: 6rem;
+
+      @include breakpoint($breakpoint-sm) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .title {
+      margin-bottom: 2.8rem;
+    }
+
+    .description {
+      margin-bottom: 3rem;
+    }
+
+    .cta {
+      padding: 13px 38px;
+    }
+  }
+}
+
+section.services-points {
+  padding: 12rem 0;
+}

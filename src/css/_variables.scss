@@ -1,0 +1,54 @@
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+$primary-color: #ee3a43;
+$secondary-color: #28335b;
+$black-color: #000000;
+$white-color: #ffffff;
+$light-color: #f8f8f8;
+
+// Mixins
+@mixin breakpoint($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin screenheight($breakpoint) {
+  @media only screen and (max-height: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin flyCenter() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fontSerifBold() {
+  font-family: 'PTSerif';
+  font-weight: bold;
+}
+
+@mixin fontSerifItalic() {
+  font-family: 'PTSerif';
+  font-style: italic;
+}
+
+@mixin sectionMobileHeight() {
+  @include screenheight($breakpoint-xs) {
+    padding: 8rem 0;
+  }
+
+  @include breakpoint($breakpoint-xs) {
+    height: calc(100vh - var(--header-nav-bottom));
+  }
+}

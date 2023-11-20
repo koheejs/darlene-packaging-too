@@ -1,0 +1,25 @@
+section.machine-photo {
+  padding: 5.4rem 0 13.6rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+section.background-section {
+  img {
+    width: 100%;
+  }
+}
+
+section.view-catalogue {
+  text-align: center;
+  padding: 12.8rem 0;
+  color: var(--white-color);
+  background-image: url('../assets/images/packaging-supplies.png');
+
+  .cta {
+    padding: 3rem 10rem;
+    margin-top: 6rem;
+  }
+}
