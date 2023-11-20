@@ -203,6 +203,26 @@ section.hero-banner .description {
   max-width: 75rem;
 }
 
+#hero-commercial {
+  background-image: url("../assets/images/hero-commercial.png");
+}
+#hero-commercial h1 {
+  max-width: 900px;
+}
+#hero-commercial .description {
+  max-width: 96rem;
+}
+
+#hero-retail {
+  background-image: url("../assets/images/hero-retail.png");
+}
+#hero-retail h1 {
+  max-width: 900px;
+}
+#hero-retail .description {
+  max-width: 82rem;
+}
+
 section.three-columns {
   padding: 5.4rem 0;
 }
@@ -311,6 +331,54 @@ section.services-glance .services-list .service-item .inner:hover {
 @media only screen and (max-width: 768px) {
   section.services-glance .services-list .service-item {
     width: 50%;
+  }
+}
+
+.keys-of-features {
+  background-color: var(--secondary-color);
+  padding: 8.6rem 0;
+}
+.keys-of-features .feature-keys {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 3rem;
+}
+.keys-of-features .feature-keys .item {
+  color: var(--white-color);
+  background-color: rgba(19, 28, 49, 0.77);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4.6rem 0;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+.keys-of-features .feature-keys .item img {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 1200px) {
+  .keys-of-features .feature-keys {
+    font-size: 2rem;
+  }
+  .keys-of-features .feature-keys .item img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .keys-of-features .feature-keys {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .keys-of-features .feature-keys .item {
+    max-width: none;
+    width: calc(50% - 12px);
   }
 }
 

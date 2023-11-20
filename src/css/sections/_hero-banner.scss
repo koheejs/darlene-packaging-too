@@ -34,12 +34,30 @@ section.hero-banner {
 
 #hero-home {
   background-image: url('../assets/images/hero-home.png');
-
   h1 {
     max-width: 820px;
   }
-
   .description {
     max-width: 75rem;
+  }
+}
+
+#hero-commercial {
+  background-image: url('../assets/images/hero-commercial.png');
+  h1 {
+    max-width: 900px;
+  }
+  .description {
+    max-width: 96rem;
+  }
+}
+
+#hero-retail {
+  background-image: url('../assets/images/hero-retail.png');
+  h1 {
+    max-width: 900px;
+  }
+  .description {
+    max-width: 82rem;
   }
 }
