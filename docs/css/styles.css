@@ -4,6 +4,7 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --light-color: #f8f8f8;
+  --dark-color: #1c2442;
   --header-top: 4rem;
   --header-height: 10rem;
   --header-nav-bottom: 40px;
@@ -380,6 +381,62 @@ section.services-glance .services-list .service-item .inner:hover {
     max-width: none;
     width: calc(50% - 12px);
   }
+}
+
+section.two-side-content .content-wrapper .row {
+  display: flex;
+}
+section.two-side-content .content-wrapper .row .col {
+  width: 50%;
+  padding-top: 70%;
+  position: relative;
+}
+section.two-side-content .content-wrapper .row:nth-child(odd) .col:nth-child(even) {
+  background-color: var(--light-color);
+}
+section.two-side-content .content-wrapper .row:nth-child(even) .col:nth-child(odd) {
+  background-color: var(--light-color);
+}
+section.two-side-content .content-wrapper .row .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.two-side-content .content-wrapper .row .content h3,
+section.two-side-content .content-wrapper .row .content ul,
+section.two-side-content .content-wrapper .row .content p {
+  width: 100%;
+  max-width: 500px;
+  line-height: 1.7;
+}
+section.two-side-content .content-wrapper .row .content .actions {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 7rem;
+}
+section.two-side-content .content-wrapper .row .content h3 {
+  font-weight: 800;
+  font-size: 4.6rem;
+  margin-bottom: 4rem;
+}
+section.two-side-content .content-wrapper .row .content ul {
+  list-style-type: initial;
+}
+section.two-side-content .content-wrapper .row .content .action-btn {
+  display: block;
+  align-self: flex-start;
+  color: var(--white-color);
+  background-color: var(--dark-color);
+  font-size: 2rem;
+  padding: 3rem 2.5rem;
+  border-radius: 10px;
+  font-weight: 800;
 }
 
 section.machine-photo {
