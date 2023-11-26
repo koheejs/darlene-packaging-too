@@ -383,13 +383,15 @@ section.services-glance .services-list .service-item .inner:hover {
   }
 }
 
+section.two-side-content .container {
+  padding: 0;
+  max-width: calc(1920px - 16rem);
+}
 section.two-side-content .content-wrapper .row {
   display: flex;
 }
 section.two-side-content .content-wrapper .row .col {
   width: 50%;
-  padding-top: 70%;
-  position: relative;
 }
 section.two-side-content .content-wrapper .row:nth-child(odd) .col:nth-child(even) {
   background-color: var(--light-color);
@@ -397,33 +399,44 @@ section.two-side-content .content-wrapper .row:nth-child(odd) .col:nth-child(eve
 section.two-side-content .content-wrapper .row:nth-child(even) .col:nth-child(odd) {
   background-color: var(--light-color);
 }
+@media only screen and (max-width: 768px) {
+  section.two-side-content .content-wrapper .row .col {
+    width: 100%;
+  }
+  section.two-side-content .content-wrapper .row:nth-child(odd) {
+    flex-direction: column;
+  }
+  section.two-side-content .content-wrapper .row:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+}
 section.two-side-content .content-wrapper .row .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  --max-width: 540px;
+  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8rem 4rem;
 }
 section.two-side-content .content-wrapper .row .content h3,
 section.two-side-content .content-wrapper .row .content ul,
 section.two-side-content .content-wrapper .row .content p {
   width: 100%;
-  max-width: 500px;
+  max-width: var(--max-width);
   line-height: 1.7;
 }
 section.two-side-content .content-wrapper .row .content .actions {
   width: 100%;
-  max-width: 500px;
+  max-width: var(--max-width);
   margin-top: 7rem;
 }
 section.two-side-content .content-wrapper .row .content h3 {
   font-weight: 800;
   font-size: 4.6rem;
   margin-bottom: 4rem;
+  line-height: 1.2;
 }
 section.two-side-content .content-wrapper .row .content ul {
   list-style-type: initial;

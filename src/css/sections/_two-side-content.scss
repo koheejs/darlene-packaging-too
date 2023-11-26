@@ -1,12 +1,15 @@
 section.two-side-content {
+  .container {
+    padding: 0;
+    max-width: calc(1920px - 16rem);
+  }
+
   .content-wrapper {
     .row {
       display: flex;
 
       .col {
         width: 50%;
-        padding-top: 70%;
-        position: relative;
       }
 
       &:nth-child(odd) {
@@ -21,28 +24,42 @@ section.two-side-content {
         }
       }
 
+      @include breakpoint($breakpoint-sm) {
+        .col {
+          width: 100%;
+        }
+
+        &:nth-child(odd) {
+          flex-direction: column;
+        }
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+        }
+      }
+
       .content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        --max-width: 540px;
+
+        position: relative;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 8rem 4rem;
 
         h3,
         ul,
         p {
           width: 100%;
-          max-width: 500px;
+          max-width: var(--max-width);
           line-height: 1.7;
         }
 
         .actions {
           width: 100%;
-          max-width: 500px;
+          max-width: var(--max-width);
           margin-top: 7rem;
         }
 
@@ -50,6 +67,7 @@ section.two-side-content {
           font-weight: 800;
           font-size: 4.6rem;
           margin-bottom: 4rem;
+          line-height: 1.2;
         }
 
         ul {
