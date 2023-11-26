@@ -1,0 +1,41 @@
+section.our-history {
+  padding: 12rem 0;
+
+  .container {
+    display: flex;
+    gap: 6rem;
+    justify-content: space-between;
+  }
+
+  .thumbnail {
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  .content {
+    h2,
+    p {
+      margin-bottom: 4rem;
+      max-width: 70rem;
+    }
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    .container {
+      flex-direction: column-reverse;
+      gap: 4rem;
+    }
+
+    .thumbnail {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .content {
+      h2,
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}

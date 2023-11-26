@@ -23,3 +23,58 @@ section.view-catalogue {
     margin-top: 6rem;
   }
 }
+
+section.choosing-packaging {
+  padding: 5rem 0;
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .row-1 {
+    gap: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .row-2 {
+    gap: 2.6rem;
+
+    .thumb {
+      max-width: 41rem;
+    }
+  }
+
+  .col-1 {
+    max-width: 56rem;
+    p {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .col-2 {
+    width: 40%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    .row {
+      flex-direction: column;
+
+      .col-1 {
+        max-width: none;
+      }
+
+      .col-2 {
+        width: 100%;
+      }
+
+      &.row-2 {
+        align-items: center;
+      }
+    }
+  }
+}
