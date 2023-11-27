@@ -560,6 +560,7 @@ section.contact-form .description {
   display: block;
   border: none;
   outline: none;
+  -webkit-appearance: none;
 }
 #contact-form .select-wrapper {
   position: relative;
