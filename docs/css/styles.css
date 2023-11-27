@@ -499,10 +499,107 @@ section.our-history .content p {
   }
 }
 
+section.contact-form {
+  --vertical-spacing: 10rem;
+  padding: 8rem 0;
+}
+@media only screen and (max-width: 768px) {
+  section.contact-form {
+    --vertical-spacing: 6rem;
+  }
+}
+section.contact-form .logo {
+  max-width: 40rem;
+  margin-bottom: var(--vertical-spacing);
+}
+section.contact-form .title {
+  max-width: 85rem;
+  margin-bottom: 2rem;
+}
+section.contact-form .description {
+  max-width: 70rem;
+}
+
+#contact-form {
+  --control-max-width: 49rem;
+  position: relative;
+  margin: var(--vertical-spacing) 0;
+}
+@media only screen and (max-width: 768px) {
+  #contact-form {
+    --control-max-width: none;
+  }
+}
+#contact-form::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: min(675px, 70%);
+  padding-top: 85.78%;
+  top: 50%;
+  left: min(50%, 65rem);
+  transform: translate(-60%, -50%);
+  z-index: -1;
+  background-image: url("../assets/images/contact-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#contact-form select,
+#contact-form input {
+  height: 7.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  max-width: var(--control-max-width);
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--white-color);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  display: block;
+  border: none;
+  outline: none;
+}
+#contact-form .select-wrapper {
+  position: relative;
+  max-width: var(--control-max-width);
+}
+#contact-form .select-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+  background-image: url("../assets/images/icon-chevrondown.png");
+  background-size: contain;
+  width: 3rem;
+  height: 3rem;
+}
+#contact-form select {
+  appearance: none; /* Disable default arrow on some browsers */
+}
+#contact-form input[type=submit] {
+  margin-top: 5.6rem;
+  color: var(--white-color);
+  background: var(--primary-color);
+}
+#contact-form input::placeholder {
+  color: var(--black-color);
+}
+#contact-form input:focus::placeholder {
+  color: var(--white-color);
+}
+
 section.qna {
   color: var(--white-color);
   background-color: var(--blue-color);
   padding: 8rem 0;
+}
+section.qna h2.title {
+  padding: 4rem 0 6rem;
+  text-align: center;
 }
 section.qna .qna-wrapper {
   display: flex;
@@ -523,6 +620,7 @@ section.qna .selector .option {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 section.qna .selector .option .icon {

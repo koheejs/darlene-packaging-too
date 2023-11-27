@@ -1,0 +1,23 @@
+section.contact-form 
+  .container 
+    .logo 
+      img(src="./assets/images/logo-colored.png", alt="")
+
+    h2.title Friendly Headline About Getting A Quote Now!
+
+    p.description Share some details of your project, and we'll package up the perfect solution for you. Expect a response from a real human within 24 hours.
+
+    form#contact-form(method="POST", action="/contact-form")
+      input(type="text" placeholder="Your Name" name="name" required)
+      input(type="email" placeholder="Email" name="email" required)
+      input(type="phone" placeholder="Phone Number" name="phone" required)
+      input(type="text" placeholder="Business Name" name="business-name" required)
+      .select-wrapper
+        select(name="contacted-by")
+          option(value="") I Prefer To Be Contacted By ...
+          option(value="Sales Manager") Sales Manager
+          option(value="Engineering Manager") Engineering Manager
+      input(type="text" placeholder="What Product Are You Packaging?" name="product" required)
+      input(type="text" placeholder="What Are The Approximate Dimensions?" name="dimensions" required)
+      input(type="number" placeholder="Quantity" name="quantity" required)
+      input(type="submit", value="Submit")
