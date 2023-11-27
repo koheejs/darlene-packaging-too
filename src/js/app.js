@@ -15,6 +15,53 @@ const ScreenSize = {
 })();
 
 /**
+ * Init FAQ selection
+ */
+(function initFAQSelection() {
+  const ACTIVE_CLASS = 'active';
+  const qnaSection = document.getElementById('qna-section');
+  if (!qnaSection) return;
+
+  const selectorOptions = qnaSection.querySelectorAll('[data-trigger]');
+  const contentBox = qnaSection.querySelector('.content-box');
+
+  function hideAllContent() {
+    const contents = contentBox.querySelectorAll(`.content.${ACTIVE_CLASS}`);
+    contents.forEach(function (ct) {
+      ct.classList.remove(ACTIVE_CLASS);
+    });
+  }
+
+  function clearActiveClass() {
+    const activeOptions = qnaSection.querySelectorAll(
+      `.option.${ACTIVE_CLASS}`
+    );
+    activeOptions.forEach(function (ct) {
+      ct.classList.remove(ACTIVE_CLASS);
+    });
+  }
+
+  function onSelectHandler() {
+    const element = this;
+    const triggerNumber = element.dataset.trigger;
+
+    hideAllContent();
+    const targetContent = contentBox.querySelector(`.content-${triggerNumber}`);
+    if (targetContent) {
+      clearActiveClass();
+      element.classList.add(ACTIVE_CLASS);
+      targetContent.classList.add(ACTIVE_CLASS);
+    }
+  }
+
+  selectorOptions.forEach(function (selector) {
+    selector.addEventListener('click', onSelectHandler);
+  });
+
+  selectorOptions[0].click();
+})();
+
+/**
  * Adjusts the height of columns within a specific section of a webpage to be the same height as the tallest column.
  */
 (function adjustSameHeight() {

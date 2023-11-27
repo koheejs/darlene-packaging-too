@@ -5,6 +5,7 @@
   --black-color: #000000;
   --light-color: #f8f8f8;
   --dark-color: #1c2442;
+  --blue-color: #2f479f;
   --header-top: 4rem;
   --header-height: 10rem;
   --header-nav-bottom: 40px;
@@ -495,6 +496,80 @@ section.our-history .content p {
   section.our-history .content h2,
   section.our-history .content p {
     max-width: 100%;
+  }
+}
+
+section.qna {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  padding: 8rem 0;
+}
+section.qna .qna-wrapper {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-around;
+}
+section.qna .selector {
+  width: 100%;
+  max-width: 59rem;
+}
+section.qna .selector .option {
+  font-weight: 700;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  margin-bottom: 3rem;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+section.qna .selector .option .icon {
+  display: block;
+  width: 21px;
+  height: 27px;
+  background-image: url("../assets/images/arrow-collapse.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section.qna .selector .option.active .icon {
+  background-image: url("../assets/images/arrow-open.png");
+  transform: rotate(90deg);
+}
+section.qna .content-box {
+  max-width: 50rem;
+}
+section.qna .content-box .content {
+  display: none;
+}
+section.qna .content-box .content.active {
+  display: block;
+}
+section.qna .content-box h3,
+section.qna .content-box .figure {
+  text-align: center;
+}
+section.qna .content-box h3,
+section.qna .content-box p,
+section.qna .content-box .figure,
+section.qna .content-box ol > li {
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+section.qna .content-box ol {
+  margin-left: 2rem;
+  list-style-type: decimal;
+}
+@media only screen and (max-width: 992px) {
+  section.qna .qna-wrapper {
+    flex-direction: column;
+  }
+  section.qna .qna-wrapper .selector {
+    max-width: none;
+  }
+  section.qna .qna-wrapper .content-box {
+    max-width: none;
   }
 }
 

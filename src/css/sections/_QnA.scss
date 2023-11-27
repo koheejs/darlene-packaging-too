@@ -1,0 +1,87 @@
+section.qna {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  padding: 8rem 0;
+
+  .qna-wrapper {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+  }
+
+  .selector {
+    width: 100%;
+    max-width: 59rem;
+    .option {
+      font-weight: 700;
+      background-color: var(--white-color);
+      color: var(--black-color);
+      margin-bottom: 3rem;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .icon {
+        display: block;
+        width: 21px;
+        height: 27px;
+        background-image: url('../assets/images/arrow-collapse.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &.active {
+        .icon {
+          background-image: url('../assets/images/arrow-open.png');
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .content-box {
+    max-width: 50rem;
+
+    .content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+
+    h3,
+    .figure {
+      text-align: center;
+    }
+
+    h3,
+    p,
+    .figure,
+    ol > li {
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    ol {
+      margin-left: 2rem;
+      list-style-type: decimal;
+    }
+  }
+
+  @include breakpoint($breakpoint-md) {
+    .qna-wrapper {
+      flex-direction: column;
+
+      .selector {
+        max-width: none;
+      }
+
+      .content-box {
+        max-width: none;
+      }
+    }
+  }
+}
