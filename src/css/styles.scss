@@ -1,6 +1,9 @@
 @import './_variables';
 @import './_global';
 
+@import './sections/footer';
+@import './sections/header';
+
 @import './sections/hero-banner';
 @import './sections/packaging-services';
 @import './sections/feedback-slider';
@@ -12,5 +15,3 @@
 @import './sections/QnA';
 
 @import './sections/other-sections';
-
-@import './sections/footer';

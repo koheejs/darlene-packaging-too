@@ -1,0 +1,125 @@
+header {
+  position: absolute;
+  padding: 4rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .container {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: block;
+    width: 31rem;
+
+    @include breakpoint($breakpoint-xs) {
+      width: 26rem;
+    }
+  }
+
+  .menu-button {
+    font-size: 3rem;
+    height: 6rem;
+    position: relative;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    border-radius: 10px;
+    padding: 8px 28px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+
+    &::after {
+      content: '';
+      @include square(21px);
+      display: block;
+      background-size: contain;
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      background-image: url('../assets/images/header-arrow.png');
+      margin-left: 1.6rem;
+      transition: transform 0.4s;
+    }
+
+    &.active {
+      width: 300px;
+      right: -8rem;
+      background-color: transparent;
+      padding: 8px 60px;
+
+      &::after {
+        transform: rotate(180deg);
+        margin-left: 4rem;
+        background-color: var(--blue-color);
+        padding: 4px;
+        border-radius: 50%;
+      }
+    }
+
+    @include breakpoint($breakpoint-sm) {
+      &.active {
+        right: -3rem;
+      }
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      font-size: 2rem;
+      height: 4rem;
+      padding: 8px 16px;
+
+      &::after {
+        @include square(16px);
+        margin-left: 1.6rem;
+      }
+
+      &.active {
+        padding: 8px 16px;
+        width: auto;
+        right: 0;
+
+        &::after {
+          margin-left: 1.6rem;
+        }
+      }
+    }
+  }
+
+  nav.site-nav {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    bottom: 0;
+    width: 300px;
+    padding: 16rem 5rem;
+    background-color: rgba(0, 0, 0, 0.48);
+    transition: right 0.4s;
+
+    &.active {
+      right: 0;
+    }
+
+    a {
+      font-weight: 800;
+      color: var(--white-color);
+    }
+
+    li {
+      margin-bottom: 3rem;
+
+      &:hover a {
+        color: var(--blue-color);
+      }
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 2rem;
+    }
+  }
+}

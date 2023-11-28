@@ -14,26 +14,7 @@ html(lang="en")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js", integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==", crossorigin="anonymous", referrerpolicy="no-referrer")
 
   body.home-page
-    //- header
-    //-   div.container
-    //-     a.logo(href='/')
-    //-       img(src='./assets/images/logo.png', alt='gift foundation')
-    //-     button.menu-button MENU
-    //-     nav.site-nav
-    //-       ul.nav-items
-    //-         li
-    //-           a(href='#hero-section', data-target="0") About Us
-    //-         li
-    //-           a(href='#section-5', data-target="6") Education
-    //-         li
-    //-           a(href='#section-10', data-target="11") Gift-A-Bike
-    //-         li
-    //-           a(href='#section-14', data-target="15") Clean Water
-    //-         li
-    //-           a(href='#section-18', data-target="19") Building Projects
-    //-         li
-    //-           a(href='#section-22', data-target="24") Community Service
-    //-       a.donate-cta(href="https://checkout.square.site/merchant/E9KW8B1KHYXDC/checkout/47TQPMLIMWVJJY465J6F7BWX", title="donate", target="_blank") DONATE
+    include ./pages/_header.jade
 
     main#main
       include ./pages/retail/_hero-section.jade
@@ -45,7 +26,7 @@ html(lang="en")
           .photo-wrapper 
             img(src="./assets/images/retail-box.png", alt="")
 
-      include ./pages/footer.jade
+      include ./pages/_footer.jade
 
     script(src="./js/anime.min.js")
     script(src="./js/app.js")

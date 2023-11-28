@@ -11,6 +11,30 @@ const ScreenSize = {
  */
 
 /**
+ * Init Header navigation
+ */
+(function initHeaderNavigation() {
+  const ACTIVE_CLASS = 'active';
+  const body = document.body;
+  const menuButton = document.querySelector('header .menu-button');
+  const siteNav = document.querySelector('header .site-nav');
+
+  menuButton.addEventListener('click', function (e) {
+    body.classList.toggle('no-scroll');
+    menuButton.classList.toggle(ACTIVE_CLASS);
+    siteNav.classList.toggle(ACTIVE_CLASS);
+  });
+
+  siteNav.querySelectorAll('a').forEach(function (nav) {
+    nav.addEventListener('click', function (e) {
+      body.classList.toggle('no-scroll');
+      menuButton.classList.toggle(ACTIVE_CLASS);
+      siteNav.classList.toggle(ACTIVE_CLASS);
+    });
+  });
+})();
+
+/**
  * Init Slider
  */
 (function initSlider() {
