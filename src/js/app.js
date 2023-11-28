@@ -10,8 +10,21 @@ const ScreenSize = {
  * =================================================================
  */
 
-(function menuEffect() {
-  console.log('app init');
+/**
+ * Init Slider
+ */
+(function initSlider() {
+  const swiper = new Swiper('.swiper', {
+    speed: 400,
+    spaceBetween: 100,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 })();
 
 /**

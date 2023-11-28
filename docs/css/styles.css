@@ -284,6 +284,61 @@ section.services-points {
   padding: 12rem 0;
 }
 
+section.feedback-slider {
+  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-size: 27px;
+  --swiper-pagination-bullet-horizontal-gap: 1px;
+  --swiper-pagination-bullet-width: 13px;
+  --swiper-pagination-bullet-height: 13px;
+  --swiper-pagination-color: #d9d9d9;
+  --swiper-pagination-bullet-inactive-color: #d9d9d9;
+  --swiper-pagination-bullet-opacity: 0.75;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-navigation-sides-offset: 2rem;
+  padding: 10rem 0;
+  min-height: 80rem;
+  background-image: url("../assets/images/feedback-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.feedback-slider .container {
+  position: relative;
+  width: 100%;
+  max-width: 108rem;
+}
+section.feedback-slider .swiper-wrapper {
+  max-width: 87rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+}
+section.feedback-slider .content {
+  color: var(--white-color);
+  max-width: 869px;
+}
+@media only screen and (max-width: 768px) {
+  section.feedback-slider .content {
+    padding: 0 4rem;
+  }
+}
+section.feedback-slider .content .stars {
+  margin-bottom: 2rem;
+}
+section.feedback-slider .content .stars .star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/images/star.png") no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+}
+section.feedback-slider .content h3,
+section.feedback-slider .content p {
+  margin-bottom: 2rem;
+}
+
 section.services-glance {
   padding: 18rem 0;
   color: var(--white-color);
