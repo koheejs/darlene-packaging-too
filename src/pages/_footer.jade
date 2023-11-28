@@ -7,11 +7,11 @@ footer
       .footer-navs
         ul.nav-column 
           li.nav-item   
-            a(href="#", title="About us") About us
+            a(href="./about-us.html", title="About us") About us
           li.nav-item   
-            a(href="#", title="Home") Home
+            a(href="./", title="Home") Home
           li.nav-item   
-            a(href="#", title="Contact us") Contact us
+            a(href="./#contact-us", title="Contact us") Contact us
           li.nav-item   
             a(href="#", title="Carrers") Carrers
 
@@ -19,13 +19,13 @@ footer
           li.nav-item   
             a(href="#", title="Resources") Resources
           li.nav-item   
-            a(href="#", title="FAQ") FAQ
+            a(href="./#qna-section", title="FAQ") FAQ
           li.nav-item   
             a(href="#", title="Ordering") Ordering
           li.nav-item   
             a(href="#", title="Inventory list") Inventory List
       
-      form.signup-form
+      form.signup-form(method="POST", action="./")
         input(type="email", placeholder="Enter email", name="email")
         button(type="submit") Sign up
 
