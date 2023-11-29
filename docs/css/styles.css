@@ -551,7 +551,7 @@ section.feedback-slider .content p {
 }
 
 section.services-glance {
-  padding: 18rem 0;
+  padding: 15rem 0 11rem;
   color: var(--white-color);
   background-color: var(--dark-color);
   text-align: center;
@@ -563,6 +563,12 @@ section.services-glance {
 }
 section.services-glance .title {
   margin-bottom: 10rem;
+}
+section.services-glance .more {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3.6rem;
+  margin-top: 5.8rem;
 }
 section.services-glance .services-list {
   display: flex;
@@ -768,6 +774,7 @@ section.our-history .content p {
 section.contact-form {
   --vertical-spacing: 10rem;
   padding: 8rem 0;
+  background-color: var(--light-color);
 }
 @media only screen and (max-width: 768px) {
   section.contact-form {
@@ -796,6 +803,10 @@ section.contact-form .description {
     --control-max-width: none;
   }
 }
+#contact-form > div {
+  position: relative;
+  z-index: 1;
+}
 #contact-form::after {
   content: "";
   display: block;
@@ -805,7 +816,7 @@ section.contact-form .description {
   top: 50%;
   left: min(50%, 65rem);
   transform: translate(-60%, -50%);
-  z-index: -1;
+  z-index: 0;
   background-image: url("../assets/images/contact-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -926,6 +937,11 @@ section.qna .content-box ol {
   margin-left: 2rem;
   list-style-type: decimal;
 }
+section.qna .content-box ul {
+  margin-left: 2rem;
+  list-style-type: initial;
+  margin-bottom: 3rem;
+}
 @media only screen and (max-width: 992px) {
   section.qna .qna-wrapper {
     flex-direction: column;
@@ -961,7 +977,11 @@ section.view-catalogue .cta {
 }
 
 section.choosing-packaging {
-  padding: 5rem 0;
+  padding: 5rem 0 9rem;
+  background-image: url("../assets/images/about-choose-packaging-bg.png");
+  background-size: min(100%, 1027px) auto;
+  background-position: right max(-100px, -20vw) top max(-20%, -10vw);
+  background-repeat: no-repeat;
 }
 section.choosing-packaging .row {
   display: flex;
@@ -981,12 +1001,18 @@ section.choosing-packaging .col-1 {
   max-width: 56rem;
 }
 section.choosing-packaging .col-1 p {
+  font-weight: 500;
   margin-bottom: 3rem;
+}
+section.choosing-packaging .col-1 p b {
+  font-weight: 700;
 }
 section.choosing-packaging .col-2 {
   width: 40%;
   flex-shrink: 0;
   display: flex;
+  gap: 7.4rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -1003,4 +1029,10 @@ section.choosing-packaging .col-2 {
   section.choosing-packaging .row.row-2 {
     align-items: center;
   }
+}
+section.choosing-packaging .celebrate {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--blue-color);
+  max-width: 44rem;
 }

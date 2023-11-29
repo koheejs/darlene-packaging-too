@@ -1,48 +1,36 @@
-doctype html
+extends ./pages/common/_layout.jade
 
-html(lang="en")
-  head
-    title Packaging too
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="./css/reset.css")
-    link(rel="stylesheet", href="./css/styles.css")
+block variables
+  - var bodyClass = "home-page"
 
-    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css")
-    script(src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js", integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==", crossorigin="anonymous", referrerpolicy="no-referrer")
+block content
+  include ./pages/home/_hero-section.jade
+  include ./pages/home/_packaging-service-section.jade
 
-  body.home-page
-    include ./pages/_header.jade
+  section.machine-photo 
+    .container 
+      .photo-wrapper 
+        img(src="./assets/images/machine-photo.png", alt="")
 
-    main#main
-      include ./pages/home/_hero-section.jade
-      include ./pages/home/_packaging-service-section.jade
+  include ./pages/home/_services-glance-section.jade
 
-      section.machine-photo 
-        .container 
-          .photo-wrapper 
-            img(src="./assets/images/machine-photo.png", alt="")
+  section.background-section
+    img(src="./assets/images/home-bg-section.png", alt="")
 
-      include ./pages/home/_services-glance-section.jade
+  include ./pages/home/_services-points.jade
 
-      section.background-section
-        img(src="./assets/images/home-bg-section.png", alt="")
+  section.view-catalogue
+    .container 
+      h2.title Shop Our Wholesale Packaging Supplies
+      button.cta View Our Catalouge
 
-      include ./pages/home/_services-points.jade
+  include ./pages/home/_feedback-slider.jade
 
-      section.view-catalogue
-        .container 
-          h2.title Shop Our Wholesale Packaging Supplies
-          button.cta View Our Catalouge
+  include ./pages/common/_contact-form.jade
+  +contact-form(
+    'Friendly Headline About Getting A Quote Now!', 
+    "Share some details of your project, and we'll package up the perfect solution for you. Expect a response from a real human within 24 hours."
+  )
 
-      include ./pages/home/_feedback-slider.jade
-      include ./pages/common/_contact-form.jade
-      include ./pages/common/_QnA.jade
+  include ./pages/common/_QnA.jade
 
-      include ./pages/_footer.jade
-
-    script(src="./js/anime.min.js")
-    script(src="./js/app.js")
-              

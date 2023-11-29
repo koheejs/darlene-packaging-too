@@ -25,7 +25,12 @@ section.view-catalogue {
 }
 
 section.choosing-packaging {
-  padding: 5rem 0;
+  padding: 5rem 0 9rem;
+
+  background-image: url('../assets/images/about-choose-packaging-bg.png');
+  background-size: min(100%, 1027px) auto;
+  background-position: right max(-100px, -20vw) top max(-20%, -10vw);
+  background-repeat: no-repeat;
 
   .row {
     display: flex;
@@ -48,7 +53,12 @@ section.choosing-packaging {
   .col-1 {
     max-width: 56rem;
     p {
+      font-weight: 500;
       margin-bottom: 3rem;
+
+      b {
+        font-weight: 700;
+      }
     }
   }
 
@@ -56,6 +66,8 @@ section.choosing-packaging {
     width: 40%;
     flex-shrink: 0;
     display: flex;
+    gap: 7.4rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -76,5 +88,12 @@ section.choosing-packaging {
         align-items: center;
       }
     }
+  }
+
+  .celebrate {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--blue-color);
+    max-width: 44rem;
   }
 }

@@ -1,5 +1,5 @@
 section.services-glance {
-  padding: 18rem 0;
+  padding: 15rem 0 11rem;
   color: var(--white-color);
   background-color: var(--dark-color);
   text-align: center;
@@ -10,6 +10,13 @@ section.services-glance {
 
   .title {
     margin-bottom: 10rem;
+  }
+
+  .more {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3.6rem;
+    margin-top: 5.8rem;
   }
 
   .services-list {
