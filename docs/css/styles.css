@@ -426,6 +426,16 @@ section.hero-banner .description {
   max-width: 82rem;
 }
 
+#hero-supplies {
+  background-image: url("../assets/images/hero-supplies.png");
+}
+#hero-supplies h1 {
+  max-width: 1000px;
+}
+#hero-supplies .description {
+  max-width: 86rem;
+}
+
 section.three-columns {
   padding: 5.4rem 0;
 }
