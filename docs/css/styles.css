@@ -274,7 +274,7 @@ header .logo {
   }
 }
 header .menu-button {
-  font-size: 3rem;
+  font-size: 2.4rem;
   height: 6rem;
   position: relative;
   color: var(--white-color);
@@ -361,13 +361,13 @@ header nav.site-nav li:hover a {
   color: var(--blue-color);
 }
 header nav.site-nav .logo {
+  width: 20rem;
   position: absolute;
   bottom: 2rem;
 }
 
 section.hero-banner {
   --base-spacing: 2;
-  padding: 0;
   background-size: cover;
   background-position: center;
   padding: calc(var(--base-spacing) * 8rem) 0;
@@ -388,7 +388,13 @@ section.hero-banner .description {
 }
 @media only screen and (max-height: 992px) {
   section.hero-banner {
-    --base-spacing: 1;
+    --base-spacing: 1.5;
+    padding: calc(var(--base-spacing) * 6rem) 0;
+  }
+}
+@media only screen and (max-height: 768px) {
+  section.hero-banner {
+    --base-spacing: 0.8;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -475,7 +481,7 @@ section.three-columns .service-item .thumb img {
 section.three-columns .service-item .icon {
   width: 105px;
   height: 105px;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 @media only screen and (max-width: 768px) {
   section.three-columns .service-item .icon {
@@ -483,7 +489,7 @@ section.three-columns .service-item .icon {
   }
 }
 section.three-columns .service-item .title {
-  margin-bottom: 2.8rem;
+  margin-bottom: 4rem;
 }
 section.three-columns .service-item .description {
   margin-bottom: 3rem;
@@ -507,8 +513,7 @@ section.feedback-slider {
   --swiper-pagination-bullet-opacity: 0.75;
   --swiper-pagination-bullet-inactive-opacity: 0.5;
   --swiper-navigation-sides-offset: 2rem;
-  padding: 10rem 0;
-  min-height: 80rem;
+  padding: 21rem 0 16rem;
   background-image: url("../assets/images/feedback-bg.png");
   background-size: cover;
   background-position: center;

@@ -36,7 +36,7 @@ section.three-columns {
 
     .icon {
       @include square(105px);
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
 
       @include breakpoint($breakpoint-sm) {
         margin-bottom: 3rem;
@@ -44,7 +44,7 @@ section.three-columns {
     }
 
     .title {
-      margin-bottom: 2.8rem;
+      margin-bottom: 4rem;
     }
 
     .description {

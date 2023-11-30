@@ -1,7 +1,6 @@
 section.hero-banner {
   --base-spacing: 2;
 
-  padding: 0;
   background-size: cover;
   background-position: center;
   padding: calc(var(--base-spacing) * 8rem) 0;
@@ -24,7 +23,12 @@ section.hero-banner {
   }
 
   @include screenheight($breakpoint-md) {
-    --base-spacing: 1;
+    --base-spacing: 1.5;
+    padding: calc(var(--base-spacing) * 6rem) 0;
+  }
+
+  @include screenheight($breakpoint-sm) {
+    --base-spacing: 0.8;
   }
 
   @include breakpoint($breakpoint-md) {
