@@ -6,6 +6,7 @@
   --light-color: #f8f8f8;
   --dark-color: #1c2442;
   --blue-color: #2f479f;
+  --blue-rgb: 47, 71, 159;
   --header-top: 4rem;
   --header-height: 10rem;
   --header-nav-bottom: 40px;
@@ -959,6 +960,11 @@ section.machine-photo {
 }
 section.machine-photo img {
   width: 100%;
+}
+
+.retail section.machine-photo {
+  padding: 14rem 0 8rem;
+  background-image: linear-gradient(to bottom, rgba(var(--blue-rgb), 0.67), var(--blue-color));
 }
 
 section.background-section img {

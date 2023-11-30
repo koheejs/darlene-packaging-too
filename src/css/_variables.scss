@@ -11,6 +11,11 @@ $light-color: #f8f8f8;
 $dark-color: #1c2442;
 $blue-color: #2f479f;
 
+// Functions
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
 // Mixins
 @mixin breakpoint($breakpoint) {
   @media only screen and (max-width: $breakpoint) {

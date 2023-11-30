@@ -7,6 +7,8 @@
   --dark-color: #{$dark-color};
   --blue-color: #{$blue-color};
 
+  --blue-rgb: #{hexToRGB($blue-color)};
+
   --header-top: 4rem;
   --header-height: 10rem;
   --header-nav-bottom: 40px;

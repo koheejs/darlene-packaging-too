@@ -6,6 +6,17 @@ section.machine-photo {
   }
 }
 
+.retail {
+  section.machine-photo {
+    padding: 14rem 0 8rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(var(--blue-rgb), 0.67),
+      var(--blue-color)
+    );
+  }
+}
+
 section.background-section {
   img {
     width: 100%;
