@@ -876,6 +876,86 @@ section.contact-form .description {
   color: var(--white-color);
 }
 
+section.message-us {
+  padding: 9.5rem 0;
+  color: var(--white-color);
+  background: var(--blue-color) url("../assets/images/message-form-bg.png") no-repeat top right;
+}
+section.message-us .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+section.message-us .content {
+  max-width: 52rem;
+}
+section.message-us .content h2 {
+  margin-bottom: 3.8rem;
+}
+section.message-us .content p {
+  line-height: 1.7;
+}
+section.message-us form {
+  width: 100%;
+  max-width: 53.4rem;
+}
+section.message-us .control {
+  position: relative;
+}
+section.message-us .control .placeholder {
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+section.message-us .control .placeholder span {
+  color: red;
+}
+section.message-us input,
+section.message-us textarea {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--white-color);
+  display: block;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+section.message-us input::placeholder,
+section.message-us textarea::placeholder {
+  color: var(--white-color);
+}
+section.message-us input.has-value + .placeholder,
+section.message-us textarea.has-value + .placeholder {
+  display: none;
+}
+section.message-us input:focus + .placeholder,
+section.message-us textarea:focus + .placeholder {
+  display: none;
+}
+section.message-us input {
+  height: 7.5rem;
+}
+section.message-us input[type=submit] {
+  margin-top: 5.6rem;
+  color: var(--white-color);
+  background: var(--primary-color);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+@media only screen and (max-width: 768px) {
+  section.message-us .wrapper {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  section.message-us form {
+    max-width: none;
+  }
+}
+
 section.qna {
   color: var(--white-color);
   background-color: var(--blue-color);
@@ -967,11 +1047,6 @@ section.machine-photo img {
   width: 100%;
 }
 
-.retail section.machine-photo {
-  padding: 14rem 0 8rem;
-  background-image: linear-gradient(to bottom, rgba(var(--blue-rgb), 0.67), var(--blue-color));
-}
-
 section.background-section img {
   width: 100%;
 }
@@ -1046,4 +1121,14 @@ section.choosing-packaging .celebrate {
   font-weight: 800;
   color: var(--blue-color);
   max-width: 44rem;
+}
+
+.retail .sections-wrapper {
+  padding: 14rem 0 8rem;
+  background: url("../assets/images/message-form-bg.png") center right no-repeat, linear-gradient(to bottom, rgba(var(--blue-rgb), 0.67), var(--blue-color));
+}
+.retail section.message-us {
+  padding: 9.5rem 0;
+  color: var(--white-color);
+  background: none;
 }

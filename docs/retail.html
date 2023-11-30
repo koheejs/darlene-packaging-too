@@ -138,11 +138,34 @@
           </div>
         </div>
       </section>
-      <section class="machine-photo"> 
-        <div class="container"> 
-          <div class="photo-wrapper"> <img src="./assets/images/retail-box.png" alt=""></div>
-        </div>
-      </section>
+      <div class="sections-wrapper">
+        <section class="machine-photo"> 
+          <div class="container"> 
+            <div class="photo-wrapper"> <img src="./assets/images/retail-box.png" alt=""></div>
+          </div>
+        </section>
+        <section class="message-us"> 
+          <div class="container"> 
+            <div class="wrapper"> 
+              <div class="content"> 
+                <h2>Whatever you need, we're here to help</h2>
+                <p>Tell us more about your requirements and our dedicated team will get back to you as soon as possible. </p>
+              </div>
+              <form id="message-form" method="POST" action="./" class="message-us-form">
+                <div class="control"> 
+                  <input type="email" name="email" placeholder="input" required>
+                  <div class="placeholder">Your Email <span>*</span></div>
+                </div>
+                <div class="control">
+                  <textarea name="message" rows="10" placeholder="input" required></textarea>
+                  <div class="placeholder">Message<span>*</span></div>
+                </div>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
       <footer>
         <div class="container"><a href="/" class="logo"><img src="./assets/images/logo.png" alt=""></a>
           <div class="footer-content"> 

@@ -1,0 +1,16 @@
+section.message-us 
+  .container 
+    .wrapper 
+      .content  
+        h2 Whatever you need, we're here to help
+        p Tell us more about your requirements and our dedicated team will get back to you as soon as possible. 
+      form.message-us-form#message-form(method="POST", action="./")
+        .control 
+          input(type="email", name="email", placeholder="input", required)
+          .placeholder Your Email 
+            span *
+        .control
+          textarea(name="message", rows="10", placeholder="input", required)
+          .placeholder Message
+            span *
+        input(type="submit", value="Submit")

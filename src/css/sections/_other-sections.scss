@@ -6,17 +6,6 @@ section.machine-photo {
   }
 }
 
-.retail {
-  section.machine-photo {
-    padding: 14rem 0 8rem;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(var(--blue-rgb), 0.67),
-      var(--blue-color)
-    );
-  }
-}
-
 section.background-section {
   img {
     width: 100%;
@@ -106,5 +95,20 @@ section.choosing-packaging {
     font-weight: 800;
     color: var(--blue-color);
     max-width: 44rem;
+  }
+}
+
+.retail {
+  .sections-wrapper {
+    padding: 14rem 0 8rem;
+    background: url('../assets/images/message-form-bg.png') center right
+        no-repeat,
+      linear-gradient(to bottom, rgba(var(--blue-rgb), 0.67), var(--blue-color));
+  }
+
+  section.message-us {
+    padding: 9.5rem 0;
+    color: var(--white-color);
+    background: none;
   }
 }

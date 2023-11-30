@@ -139,3 +139,25 @@ const ScreenSize = {
   window.addEventListener('resize', _.debounce(makeSameDescriptionHeight, 50));
   window.dispatchEvent(new Event('resize'));
 })();
+
+(function initMessageForm() {
+  const formElement = document.querySelector('form.message-us-form');
+  const formControlElements = formElement.querySelectorAll('input, textarea');
+
+  formControlElements.forEach((formControl) => {
+    const placeholder = formControl.nextElementSibling;
+    if (!placeholder) return;
+
+    placeholder.addEventListener('click', () => {
+      formControl.focus();
+    });
+
+    formControl.addEventListener('input', (event) => {
+      if (event.target.value) {
+        formControl.classList.add('has-value');
+      } else {
+        formControl.classList.remove('has-value');
+      }
+    });
+  });
+})();

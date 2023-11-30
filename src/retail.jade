@@ -8,7 +8,10 @@ block content
   include ./pages/retail/_feature-keys.jade
   include ./pages/retail/_two-side-content.jade
 
-  section.machine-photo 
-    .container 
-      .photo-wrapper 
-        img(src="./assets/images/retail-box.png", alt="")
+  .sections-wrapper
+    section.machine-photo 
+      .container 
+        .photo-wrapper 
+          img(src="./assets/images/retail-box.png", alt="")
+    
+    include ./pages/common/_message-us-form.jade

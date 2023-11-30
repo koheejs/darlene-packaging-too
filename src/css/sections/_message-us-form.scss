@@ -1,0 +1,93 @@
+section.message-us {
+  padding: 9.5rem 0;
+  color: var(--white-color);
+
+  background: var(--blue-color) url('../assets/images/message-form-bg.png')
+    no-repeat top right;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .content {
+    max-width: 52rem;
+
+    h2 {
+      margin-bottom: 3.8rem;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+  }
+
+  form {
+    width: 100%;
+    max-width: 53.4rem;
+  }
+
+  .control {
+    position: relative;
+
+    .placeholder {
+      position: absolute;
+      top: 24px;
+      left: 25px;
+      color: var(--dark-color);
+      font-weight: 700;
+      span {
+        color: red;
+      }
+    }
+  }
+
+  input,
+  textarea {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--white-color);
+    display: block;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: var(--white-color);
+    }
+
+    &.has-value + .placeholder {
+      display: none;
+    }
+
+    &:focus + .placeholder {
+      display: none;
+    }
+  }
+
+  input {
+    height: 7.5rem;
+
+    &[type='submit'] {
+      margin-top: 5.6rem;
+      color: var(--white-color);
+      background: var(--primary-color);
+      box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @include breakpoint($breakpoint-sm) {
+    .wrapper {
+      flex-direction: column;
+      gap: 6rem;
+    }
+
+    form {
+      max-width: none;
+    }
+  }
+}
