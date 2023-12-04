@@ -285,28 +285,30 @@ header .menu-button {
   z-index: 100;
   display: flex;
   align-items: center;
-  transition: all 0.4s;
 }
 header .menu-button::after {
   content: "";
   width: 21px;
   height: 21px;
   display: block;
-  background-size: contain;
+  background-size: 80% 80%;
   background-origin: content-box;
+  background-position: center;
   background-repeat: no-repeat;
   background-image: url("../assets/images/header-arrow.png");
-  margin-left: 1.6rem;
-  transition: transform 0.4s;
+  margin-left: 0;
+  width: 0px;
+  transition: all 0.4s;
 }
 header .menu-button.active {
   width: 300px;
   right: -8rem;
   background-color: transparent;
+  box-shadow: none;
   padding: 8px 60px;
 }
 header .menu-button.active::after {
-  transform: rotate(180deg);
+  width: 21px;
   margin-left: 4rem;
   background-color: var(--blue-color);
   padding: 4px;
@@ -326,7 +328,7 @@ header .menu-button.active::after {
   header .menu-button::after {
     width: 16px;
     height: 16px;
-    margin-left: 1.6rem;
+    width: 0px;
   }
   header .menu-button.active {
     padding: 8px 16px;
@@ -335,6 +337,7 @@ header .menu-button.active::after {
   }
   header .menu-button.active::after {
     margin-left: 1.6rem;
+    width: 16px;
   }
 }
 header nav.site-nav {
@@ -554,6 +557,17 @@ section.feedback-slider .content .stars .star {
 section.feedback-slider .content h3,
 section.feedback-slider .content p {
   margin-bottom: 2rem;
+}
+section.feedback-slider .preload-backgrounds {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: -100px;
+  left: -100px;
+}
+section.feedback-slider .preload-backgrounds div {
+  width: 50px;
+  height: 50px;
 }
 
 section.services-glance {

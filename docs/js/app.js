@@ -38,6 +38,39 @@ const ScreenSize = {
  * Init Slider
  */
 (function initSlider() {
+  function getSectionBackgrounds(element) {
+    const section = element.closest('section');
+    const bgListStr = section.dataset.backgrounds;
+    if (!bgListStr) return { section, bgList: [] };
+    const bgList = bgListStr.replace(/ /g, '').split(',');
+    return { section, bgList };
+  }
+
+  function preloadImages(element) {
+    const sectionBg = getSectionBackgrounds(element);
+    if (!sectionBg.bgList.length) return;
+
+    const preloadWrapper = sectionBg.section.querySelector(
+      '.preload-backgrounds'
+    );
+    if (!preloadWrapper) return;
+
+    preloadWrapper.insertAdjacentHTML(
+      'beforeend',
+      // sectionBg.bgList.map((bg) => `<img src="${bg}" />`).join('')
+      sectionBg.bgList
+        .map((bg) => `<div style="background-image: url(${bg})"></div>`)
+        .join('')
+    );
+  }
+
+  function updateBackground(index, element) {
+    const sectionBg = getSectionBackgrounds(element);
+    if (!sectionBg.bgList.length) return;
+    sectionBg.section.style.backgroundImage =
+      'url(' + sectionBg.bgList[index] + ')';
+  }
+
   const swiper = new Swiper('.swiper', {
     speed: 400,
     spaceBetween: 100,
@@ -47,6 +80,15 @@ const ScreenSize = {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    on: {
+      init: function (swiper) {
+        preloadImages(swiper.wrapperEl);
+        updateBackground(0, swiper.wrapperEl);
+      },
+      slideChangeTransitionStart: function (swiper) {
+        updateBackground(swiper.activeIndex, swiper.wrapperEl);
+      },
     },
   });
 })();

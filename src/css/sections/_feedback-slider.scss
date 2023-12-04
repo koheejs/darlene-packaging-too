@@ -56,4 +56,17 @@ section.feedback-slider {
       margin-bottom: 2rem;
     }
   }
+
+  .preload-backgrounds {
+    $preload-size: 50px;
+    position: fixed;
+    @include square(#{$preload-size});
+    top: #{$preload-size * -2};
+    left: #{$preload-size * -2};
+
+    div {
+      width: #{$preload-size};
+      height: #{$preload-size};
+    }
+  }
 }
