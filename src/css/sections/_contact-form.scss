@@ -14,17 +14,18 @@ section.contact-form {
   }
 
   .title {
-    max-width: 85rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin: 0 auto 2rem;
   }
 
   .description {
-    max-width: 70rem;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
 #contact-form {
-  --control-max-width: 49rem;
+  --control-max-width: 75rem;
 
   position: relative;
   margin: var(--vertical-spacing) 0;
@@ -33,7 +34,13 @@ section.contact-form {
     --control-max-width: none;
   }
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   & > div {
+    width: 100%;
+    max-width: var(--control-max-width);
     position: relative;
     z-index: 1;
   }
@@ -45,8 +52,8 @@ section.contact-form {
     width: min(675px, 70%);
     padding-top: 85.78%;
     top: 50%;
-    left: min(50%, 65rem);
-    transform: translate(-60%, -50%);
+    right: min(20%, 65rem);
+    transform: translateY(-50%);
     z-index: 0;
     background-image: url('../assets/images/contact-bg.png');
     background-size: contain;
@@ -60,7 +67,6 @@ section.contact-form {
     font-size: 2rem;
     font-weight: 700;
     width: 100%;
-    max-width: var(--control-max-width);
     border-radius: 10px;
     padding: 2rem 2.5rem;
     margin-bottom: 1.5rem;

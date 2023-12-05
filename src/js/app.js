@@ -184,6 +184,8 @@ const ScreenSize = {
 
 (function initMessageForm() {
   const formElement = document.querySelector('form.message-us-form');
+  if (!formElement) return;
+
   const formControlElements = formElement.querySelectorAll('input, textarea');
 
   formControlElements.forEach((formControl) => {

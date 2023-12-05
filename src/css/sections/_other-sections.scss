@@ -25,7 +25,7 @@ section.view-catalogue {
 }
 
 section.choosing-packaging {
-  padding: 5rem 0 9rem;
+  padding: 5rem 0 12rem;
 
   background-image: url('../assets/images/about-choose-packaging-bg.png');
   background-size: min(100%, 1027px) auto;
@@ -39,7 +39,7 @@ section.choosing-packaging {
 
   .row-1 {
     gap: 4rem;
-    margin-bottom: 8rem;
+    margin: 7rem 0 14rem;
   }
 
   .row-2 {
@@ -72,6 +72,13 @@ section.choosing-packaging {
     justify-content: center;
   }
 
+  .celebrate {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--blue-color);
+    text-align: center;
+  }
+
   @include breakpoint($breakpoint-sm) {
     .row {
       flex-direction: column;
@@ -88,13 +95,6 @@ section.choosing-packaging {
         align-items: center;
       }
     }
-  }
-
-  .celebrate {
-    font-size: 3.2rem;
-    font-weight: 800;
-    color: var(--blue-color);
-    max-width: 44rem;
   }
 }
 

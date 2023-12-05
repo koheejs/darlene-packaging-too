@@ -171,7 +171,9 @@ img {
 footer {
   padding: 6rem 0;
   color: white;
-  background-color: var(--secondary-color);
+  background: url("../assets/images/footer-bg.png") var(--secondary-color);
+  background-size: cover;
+  background-position: bottom left;
 }
 footer a {
   color: white;
@@ -375,7 +377,7 @@ section.hero-banner {
   background-position: center;
   padding: calc(var(--base-spacing) * 8rem) 0;
   color: var(--white-color);
-  height: 80vh;
+  height: 90vh;
 }
 section.hero-banner .container {
   height: 100%;
@@ -806,17 +808,21 @@ section.contact-form .logo {
   margin-bottom: var(--vertical-spacing);
 }
 section.contact-form .title {
-  max-width: 85rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin: 0 auto 2rem;
 }
 section.contact-form .description {
-  max-width: 70rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #contact-form {
-  --control-max-width: 49rem;
+  --control-max-width: 75rem;
   position: relative;
   margin: var(--vertical-spacing) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media only screen and (max-width: 768px) {
   #contact-form {
@@ -824,6 +830,8 @@ section.contact-form .description {
   }
 }
 #contact-form > div {
+  width: 100%;
+  max-width: var(--control-max-width);
   position: relative;
   z-index: 1;
 }
@@ -834,8 +842,8 @@ section.contact-form .description {
   width: min(675px, 70%);
   padding-top: 85.78%;
   top: 50%;
-  left: min(50%, 65rem);
-  transform: translate(-60%, -50%);
+  right: min(20%, 65rem);
+  transform: translateY(-50%);
   z-index: 0;
   background-image: url("../assets/images/contact-bg.png");
   background-size: contain;
@@ -848,7 +856,6 @@ section.contact-form .description {
   font-size: 2rem;
   font-weight: 700;
   width: 100%;
-  max-width: var(--control-max-width);
   border-radius: 10px;
   padding: 2rem 2.5rem;
   margin-bottom: 1.5rem;
@@ -1077,7 +1084,7 @@ section.view-catalogue .cta {
 }
 
 section.choosing-packaging {
-  padding: 5rem 0 9rem;
+  padding: 5rem 0 12rem;
   background-image: url("../assets/images/about-choose-packaging-bg.png");
   background-size: min(100%, 1027px) auto;
   background-position: right max(-100px, -20vw) top max(-20%, -10vw);
@@ -1089,7 +1096,7 @@ section.choosing-packaging .row {
 }
 section.choosing-packaging .row-1 {
   gap: 4rem;
-  margin-bottom: 8rem;
+  margin: 7rem 0 14rem;
 }
 section.choosing-packaging .row-2 {
   gap: 2.6rem;
@@ -1116,6 +1123,12 @@ section.choosing-packaging .col-2 {
   align-items: center;
   justify-content: center;
 }
+section.choosing-packaging .celebrate {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--blue-color);
+  text-align: center;
+}
 @media only screen and (max-width: 768px) {
   section.choosing-packaging .row {
     flex-direction: column;
@@ -1129,12 +1142,6 @@ section.choosing-packaging .col-2 {
   section.choosing-packaging .row.row-2 {
     align-items: center;
   }
-}
-section.choosing-packaging .celebrate {
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: var(--blue-color);
-  max-width: 44rem;
 }
 
 .retail .sections-wrapper {

@@ -1,7 +1,9 @@
 footer {
   padding: 6rem 0;
   color: white;
-  background-color: var(--secondary-color);
+  background: url('../assets/images/footer-bg.png') var(--secondary-color);
+  background-size: cover;
+  background-position: bottom left;
 
   a {
     color: white;
