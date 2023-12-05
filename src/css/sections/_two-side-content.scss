@@ -39,27 +39,23 @@ section.two-side-content {
       }
 
       .content {
-        --max-width: 540px;
-
         position: relative;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 8rem 4rem;
+        padding: 8rem 7rem;
 
         h3,
         ul,
         p {
           width: 100%;
-          max-width: var(--max-width);
           line-height: 1.7;
         }
 
         .actions {
           width: 100%;
-          max-width: var(--max-width);
           margin-top: 7rem;
         }
 
@@ -72,6 +68,7 @@ section.two-side-content {
 
         ul {
           list-style-type: initial;
+          margin-left: 4rem;
         }
 
         .action-btn {
