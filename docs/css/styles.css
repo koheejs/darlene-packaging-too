@@ -41,7 +41,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 9px;
   scroll-behavior: smooth;
 }
 @media only screen and (max-width: 768px) {
@@ -138,7 +138,7 @@ img {
   color: var(--white-color);
   font-weight: 800;
   font-size: 2rem;
-  padding: 30px 22px;
+  padding: 24px 24px;
   border-radius: 1rem;
   width: fit-content;
   box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
@@ -276,13 +276,14 @@ header .logo {
   }
 }
 header .menu-button {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  font-weight: 800;
   height: 6rem;
   position: relative;
   color: var(--white-color);
   background-color: var(--blue-color);
   border-radius: 10px;
-  padding: 8px 28px;
+  padding: 8px 44px;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
   z-index: 100;
   display: flex;
@@ -307,7 +308,7 @@ header .menu-button.active {
   right: -8rem;
   background-color: transparent;
   box-shadow: none;
-  padding: 8px 60px;
+  padding: 8px 44px;
 }
 header .menu-button.active::after {
   width: 21px;
@@ -375,15 +376,16 @@ section.hero-banner {
   --base-spacing: 2;
   background-size: cover;
   background-position: center;
-  padding: calc(var(--base-spacing) * 8rem) 0;
+  padding: calc(var(--base-spacing) * 8rem) 0 0;
   color: var(--white-color);
-  height: 90vh;
+  height: 100vh;
+  min-height: 500px;
 }
 section.hero-banner .container {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 section.hero-banner h1 {
   margin-bottom: calc(var(--base-spacing) * 3rem);
@@ -394,7 +396,7 @@ section.hero-banner .description {
 @media only screen and (max-height: 992px) {
   section.hero-banner {
     --base-spacing: 1.5;
-    padding: calc(var(--base-spacing) * 6rem) 0;
+    padding: calc(var(--base-spacing) * 6rem) 0 0;
   }
 }
 @media only screen and (max-height: 768px) {
@@ -416,6 +418,16 @@ section.hero-banner .description {
 }
 #hero-home .description {
   max-width: 75rem;
+}
+
+#hero-about-us {
+  background-image: url("../assets/images/hero-about-us.png");
+}
+#hero-about-us h1 {
+  max-width: 920px;
+}
+#hero-about-us .description {
+  max-width: 95rem;
 }
 
 #hero-commercial {
@@ -803,24 +815,23 @@ section.contact-form {
 }
 section.contact-form .logo {
   max-width: 40rem;
-  margin-bottom: var(--vertical-spacing);
+  margin-bottom: 6rem;
 }
 section.contact-form .title {
-  text-align: center;
-  margin: 0 auto 2rem;
+  margin-bottom: 5rem;
+  max-width: 70rem;
 }
 section.contact-form .description {
-  text-align: center;
-  margin: 0 auto;
+  max-width: 70rem;
 }
 
 #contact-form {
-  --control-max-width: 75rem;
+  --control-max-width: 65rem;
   position: relative;
   margin: var(--vertical-spacing) 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 @media only screen and (max-width: 768px) {
   #contact-form {
@@ -1116,16 +1127,26 @@ section.choosing-packaging .col-2 {
   width: 40%;
   flex-shrink: 0;
   display: flex;
-  gap: 7.4rem;
+  gap: 7rem;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 section.choosing-packaging .celebrate {
+  max-width: 50rem;
   font-size: 3.2rem;
   font-weight: 800;
   color: var(--blue-color);
-  text-align: center;
+}
+section.choosing-packaging .cta {
+  max-width: 46rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+section.choosing-packaging .cta img {
+  width: 26px;
 }
 @media only screen and (max-width: 768px) {
   section.choosing-packaging .row {

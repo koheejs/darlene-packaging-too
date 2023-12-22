@@ -22,13 +22,14 @@ header {
   }
 
   .menu-button {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    font-weight: 800;
     height: 6rem;
     position: relative;
     color: var(--white-color);
     background-color: var(--blue-color);
     border-radius: 10px;
-    padding: 8px 28px;
+    padding: 8px 44px;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
     z-index: 100;
     display: flex;
@@ -53,7 +54,7 @@ header {
       right: -8rem;
       background-color: transparent;
       box-shadow: none;
-      padding: 8px 60px;
+      padding: 8px 44px;
 
       &::after {
         width: 21px;
@@ -84,6 +85,7 @@ header {
         padding: 8px 16px;
         width: auto;
         right: 0;
+        // right: 143px;
 
         &::after {
           margin-left: 1.6rem;

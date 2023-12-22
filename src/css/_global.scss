@@ -48,7 +48,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 9px;
   scroll-behavior: smooth;
   @include breakpoint($breakpoint-sm) {
     font-size: 8px;
@@ -141,7 +141,7 @@ img {
   color: var(--white-color);
   font-weight: 800;
   font-size: 2rem;
-  padding: 30px 22px;
+  padding: 24px 24px;
   border-radius: 1rem;
   width: fit-content;
   box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
