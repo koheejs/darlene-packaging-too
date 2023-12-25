@@ -142,6 +142,10 @@ img {
   border-radius: 1rem;
   width: fit-content;
   box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s;
+}
+.cta:hover {
+  background-color: var(--dark-color);
 }
 
 .text-center {
@@ -714,6 +718,10 @@ section.two-side-content .content-wrapper .row {
 section.two-side-content .content-wrapper .row .col {
   width: 50%;
 }
+section.two-side-content .content-wrapper .row .thumb img {
+  width: 100%;
+  max-width: 500px;
+}
 section.two-side-content .content-wrapper .row:nth-child(odd) .col:nth-child(even) {
   background-color: var(--light-color);
 }
@@ -769,6 +777,10 @@ section.two-side-content .content-wrapper .row .content .action-btn {
   padding: 3rem 2.5rem;
   border-radius: 10px;
   font-weight: 800;
+  transition: background-color 0.2s;
+}
+section.two-side-content .content-wrapper .row .content .action-btn:hover {
+  background-color: var(--primary-color);
 }
 
 section.our-history {
@@ -898,6 +910,10 @@ section.contact-form .description {
   margin-top: 5.6rem;
   color: var(--white-color);
   background: var(--primary-color);
+  transition: background-color 0.2s;
+}
+#contact-form input[type=submit]:hover {
+  background-color: var(--dark-color);
 }
 #contact-form input::placeholder {
   color: var(--black-color);
@@ -975,6 +991,10 @@ section.message-us input[type=submit] {
   color: var(--white-color);
   background: var(--primary-color);
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s;
+}
+section.message-us input[type=submit]:hover {
+  background-color: var(--dark-color);
 }
 @media only screen and (max-width: 768px) {
   section.message-us .wrapper {
