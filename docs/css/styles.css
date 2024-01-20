@@ -133,7 +133,9 @@ img {
 }
 
 .cta {
+  display: block;
   border: 0;
+  cursor: pointer;
   background-color: var(--primary-color);
   color: var(--white-color);
   font-weight: 800;
