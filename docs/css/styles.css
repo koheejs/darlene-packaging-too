@@ -150,6 +150,11 @@ img {
   background-color: var(--dark-color);
 }
 
+.self-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .text-center {
   text-align: center;
 }
@@ -772,6 +777,7 @@ section.two-side-content .content-wrapper .row .content ul {
 }
 section.two-side-content .content-wrapper .row .content .action-btn {
   display: block;
+  width: fit-content;
   align-self: flex-start;
   color: var(--white-color);
   background-color: var(--dark-color);

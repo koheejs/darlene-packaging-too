@@ -80,6 +80,7 @@ section.two-side-content {
 
         .action-btn {
           display: block;
+          width: fit-content;
           align-self: flex-start;
           color: var(--white-color);
           background-color: var(--dark-color);
