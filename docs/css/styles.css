@@ -1199,6 +1199,47 @@ section.qna .content-box ul {
   }
 }
 
+section.videos {
+  padding: 11rem 0 11rem;
+  text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  section.videos {
+    padding: 12rem 0;
+  }
+}
+section.videos .title {
+  margin-bottom: 10rem;
+}
+section.videos ul.videos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+section.videos ul.videos .vid {
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 360px;
+  background-color: #ccceee;
+  aspect-ratio: 9/16;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+section.videos ul.videos .vid iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 992px) {
+  section.videos ul.videos {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  section.videos ul.videos .vid {
+    flex-basis: 50%;
+  }
+}
+
 section.machine-photo {
   padding: 5.4rem 0 13.6rem;
 }
