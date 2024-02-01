@@ -9,19 +9,51 @@ mixin contact-form(title, description)
 
       //- p.description Share some details of your project, and we'll package up the perfect solution for you. Expect a response from a real human within 24 hours.
       p.description #{description}
-
+    
+    .container.two-columns
       form#contact-form(method="POST", action="./")
         div 
           input(type="text" placeholder="Your Name" name="name" required)
           input(type="email" placeholder="Email" name="email" required)
-          input(type="phone" placeholder="Phone Number" name="phone" required)
+          input(type="tel" placeholder="Phone Number" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required)
           input(type="text" placeholder="Business Name" name="business-name" required)
-          .select-wrapper
-            select(name="contacted-by")
-              option(value="") I Prefer To Be Contacted By ...
-              option(value="Sales Manager") Sales Manager
-              option(value="Engineering Manager") Engineering Manager
           input(type="text" placeholder="What Product Are You Packaging?" name="product" required)
           input(type="text" placeholder="What Are The Approximate Dimensions?" name="dimensions" required)
           input(type="number" placeholder="Quantity" name="quantity" required)
+          textarea(placeholder="Message", name="message", cols="30", rows="10")
           input(type="submit", value="Submit")
+      .address-section
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.953917917983!2d-80.54061942251022!3d43.503296871109704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf3da04ebb671%3A0x1828402db8ee88df!2s652%20Colby%20Dr%2C%20Waterloo%2C%20ON%20N2V%201A2%2C%20Canada!5e0!3m2!1svi!2s!4v1706794147515!5m2!1svi!2s", allowfullscreen, loading="lazy", referrerpolicy="no-referrer-when-downgrade")
+        .content
+          h3.title Visit us in person
+          .row 
+            .column 
+              h4 Address
+              p
+                strong 652 Colby Dr,
+                br
+                strong Waterloo, ON
+                br
+                strong N2V 1A2
+            .column 
+              h4 Store Hours
+              p Monday: 8:00 am - 5:00 pm 
+              p Tuesday: 8:00 am - 5:00 pm
+              p Wednesday: 8:00 am - 5:00 pm
+              p Thursday: 8:00 am - 5:00 pm
+              p Friday: 8:00 am - 5:00 pm
+          .row
+            .column 
+              p 
+                strong Phone: 
+                | (519)746-3099
+          .row
+            .column 
+              p 
+                strong Email: 
+                | sales@packagingtoo.com
+            .column 
+              p Closed on weekends 
+    .container 
+      .emblem 
+        img(src="./assets/images/contact-bg.png", alt="")
