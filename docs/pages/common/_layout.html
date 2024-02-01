@@ -30,23 +30,42 @@
     <main id="main">
       <footer>
         <div class="container"><a href="/" class="logo"><img src="./assets/images/logo.png" alt=""></a>
-          <div class="footer-content"> 
-            <div class="footer-navs">
-              <ul class="nav-column"> 
-                <li class="nav-item">  <a href="./" title="Home">Home</a></li>
-                <li class="nav-item">  <a href="./#contact-us" title="Contact us">Contact us</a></li>
-              </ul>
-              <ul class="nav-column"> 
-                <li class="nav-item">  <a href="./#qna-section" title="FAQ">FAQ</a></li>
-                <li class="nav-item">  <a href="./#contact-us" title="Ordering">Ordering</a></li>
-              </ul>
-            </div>
+          <div class="form-wrapper">
             <form method="POST" action="./" class="signup-form">
               <input type="email" placeholder="Enter email" name="email">
               <button type="submit">Sign up</button>
             </form>
           </div>
-          <p class="copyright">© Packaging Too Inc, 2023</p>
+          <div class="footer-content"> 
+            <div class="row">
+              <ul class="column nav-column"> 
+                <li class="nav-item">  <a href="./" title="Home">Home</a></li>
+                <li class="nav-item">  <a href="./#contact-us" title="Contact us">Contact us</a></li>
+              </ul>
+              <ul class="column nav-column"> 
+                <li class="nav-item">  <a href="./#qna-section" title="FAQ">FAQ</a></li>
+                <li class="nav-item">  <a href="./#contact-us" title="Ordering">Ordering</a></li>
+              </ul>
+              <div class="column address-column">
+                <p class="text-bold">Address<br>652 Colby Dr,<br>Waterloo, ON<br>N2V 1A2</p>
+              </div>
+            </div>
+            <div class="row bottom">
+              <div class="column">
+                <p class="copyright">© Packaging Too Inc, 2024 </p>
+              </div>
+              <div class="column address-column flex">
+                <div class="box"> 
+                  <p><strong>Phone: </strong><a href="tel: +1-519-746-3099" title="Call to (519) 746-3099">(519) 746-3099</a></p>
+                  <p> <strong>Email: </strong><a href="mailto: sales@packagingtoo.com" title="Email to sales@packagingtoo.com">sales@packagingtoo.com</a></p>
+                </div>
+                <div class="box"> <a href="https://www.facebook.com/packagingtoo1/" target="_blank" title="Facebook"> 
+                    <svg fill="#ffffff" width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </main>

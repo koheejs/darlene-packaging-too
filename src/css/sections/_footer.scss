@@ -19,27 +19,71 @@ footer {
   }
 
   .footer-content {
-    display: flex;
-    justify-content: flex-end;
-    margin: 4rem 0 8rem;
-    gap: 8rem;
+    margin-top: 4rem;
+
+    .row {
+      display: flex;
+      justify-content: flex-end;
+      margin: 2rem 0 2rem;
+      gap: 8rem;
+
+      &.bottom {
+        align-items: flex-end;
+      }
+
+      .nav-item {
+        font-weight: 500;
+        line-height: 2;
+      }
+
+      .address-column {
+        flex: 1;
+        max-width: 500px;
+
+        &.flex {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+      }
+
+      @include breakpoint($breakpoint-sm) {
+        flex-direction: column;
+        gap: 0;
+
+        &.bottom {
+          align-items: stretch;
+          flex-direction: column-reverse;
+        }
+
+        .address-column {
+          margin: 2rem 0;
+
+          &.flex {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+          }
+        }
+      }
+    }
   }
 
-  .footer-navs {
-    flex-shrink: 0;
+  .form-wrapper {
     display: flex;
-    gap: 8rem;
-
-    .nav-item {
-      font-weight: 500;
-      line-height: 2;
-    }
+    justify-content: flex-end;
+    margin: 4rem 0;
   }
 
   .signup-form {
     position: relative;
     width: 50%;
     max-width: 500px;
+
+    @include breakpoint($breakpoint-md) {
+      width: 100%;
+      max-width: none;
+    }
 
     input {
       height: 6rem;
@@ -90,7 +134,6 @@ footer {
     .signup-form {
       position: relative;
       width: 100%;
-      // max-width: 500px;
     }
   }
 }

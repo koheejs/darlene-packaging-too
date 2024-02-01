@@ -198,24 +198,63 @@ footer .logo img {
   width: 100%;
 }
 footer .footer-content {
+  margin-top: 4rem;
+}
+footer .footer-content .row {
   display: flex;
   justify-content: flex-end;
-  margin: 4rem 0 8rem;
+  margin: 2rem 0 2rem;
   gap: 8rem;
 }
-footer .footer-navs {
-  flex-shrink: 0;
-  display: flex;
-  gap: 8rem;
+footer .footer-content .row.bottom {
+  align-items: flex-end;
 }
-footer .footer-navs .nav-item {
+footer .footer-content .row .nav-item {
   font-weight: 500;
   line-height: 2;
+}
+footer .footer-content .row .address-column {
+  flex: 1;
+  max-width: 500px;
+}
+footer .footer-content .row .address-column.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  footer .footer-content .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  footer .footer-content .row.bottom {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+  footer .footer-content .row .address-column {
+    margin: 2rem 0;
+  }
+  footer .footer-content .row .address-column.flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+footer .form-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 4rem 0;
 }
 footer .signup-form {
   position: relative;
   width: 50%;
   max-width: 500px;
+}
+@media only screen and (max-width: 992px) {
+  footer .signup-form {
+    width: 100%;
+    max-width: none;
+  }
 }
 footer .signup-form input {
   height: 6rem;
@@ -874,6 +913,9 @@ section.contact-form .container.two-columns .address-section {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
+}
+section.contact-form .container.two-columns .address-section a {
+  color: var(--black-color);
 }
 section.contact-form .container.two-columns .address-section iframe {
   width: 100%;
