@@ -205,3 +205,58 @@ const ScreenSize = {
     });
   });
 })();
+
+(function setupFormBehavior() {
+  const contactForm = document.getElementById('contact-form');
+  const messageForm = document.getElementById('message-form');
+  const signupForm = document.getElementById('signup-form');
+
+  function alertFailedRequest() {
+    alert('Form failed to submit');
+  }
+
+  function alertSuccessRequest() {
+    alert('Form submitted successfully');
+  }
+
+  function handleSendForm(form, formType) {
+    const formAction = form.getAttribute('action');
+    const formData = new FormData(form);
+
+    formData.append('formType', formType);
+    const searchParams = new URLSearchParams(formData).toString();
+
+    fetch(formAction + '?' + searchParams)
+      .then(function (response) {
+        if (response.ok) {
+          alertSuccessRequest();
+        } else {
+          alertFailedRequest();
+        }
+      })
+      .catch(function () {
+        alertFailedRequest();
+      });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      handleSendForm(contactForm, 'contact-form');
+    });
+  }
+
+  if (messageForm) {
+    messageForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      handleSendForm(messageForm, 'message-form');
+    });
+  }
+
+  if (signupForm) {
+    signupForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      handleSendForm(signupForm, 'signup-form');
+    });
+  }
+})();

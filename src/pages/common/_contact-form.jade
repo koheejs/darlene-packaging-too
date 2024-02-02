@@ -11,7 +11,7 @@ mixin contact-form(title, description)
       p.description #{description}
     
     .container.two-columns
-      form#contact-form(method="POST", action="./")
+      form#contact-form(method="GET", action="https://www.packagingtoo.com/email.php")
         div 
           input(type="text" placeholder="Your Name" name="name" required)
           input(type="email" placeholder="Email" name="email" required)
