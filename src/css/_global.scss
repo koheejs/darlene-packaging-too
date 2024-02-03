@@ -121,6 +121,15 @@ button {
   cursor: pointer;
 }
 
+input,
+select,
+textarea {
+  font-family: 'Jarkata';
+  &::placeholder {
+    font-family: 'Jarkata';
+  }
+}
+
 img {
   max-width: 100%;
 }
