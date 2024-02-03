@@ -230,6 +230,7 @@ const ScreenSize = {
       .then(function (response) {
         if (response.ok) {
           alertSuccessRequest();
+          form.reset();
         } else {
           alertFailedRequest();
         }
