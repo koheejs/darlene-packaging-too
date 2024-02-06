@@ -1251,6 +1251,43 @@ section.videos ul.videos .vid iframe {
   }
 }
 
+section.table-section {
+  padding: 11rem 0;
+}
+section.table-section .title {
+  text-align: center;
+  margin-bottom: 12rem;
+}
+section.table-section .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+section.table-section table {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 600px;
+  margin: 0 auto;
+}
+section.table-section table th {
+  font-weight: bold;
+  font-size: 3rem;
+}
+section.table-section table td {
+  font-size: 2.5rem;
+}
+section.table-section table td,
+section.table-section table th {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+section.table-section table th {
+  padding-bottom: 4rem;
+}
+section.table-section table td:first-child,
+section.table-section table td:last-child {
+  width: 33.3333333333%;
+}
+
 section.machine-photo {
   padding: 5.4rem 0 13.6rem;
 }
